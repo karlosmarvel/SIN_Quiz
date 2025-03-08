@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin/Chat</title>
+    <link rel="stylesheet" href="{% static '/styles/styles.css'%}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="imagem-container">
+        <img src="{% static 'Imagens/SIN_Quiz_Logo.png' %}" alt="Logo SIN/Quiz">
+    </div>
+
+
+    <div id="comecar-container">
+        <p>Pergunta</p>
+    </div>
+
+    <div id="pergunta-container">
+        <p>{{ Pergunta }}</p>
+    </div>
+
+    <label class="opcao">
+        <input type="radio" name="resposta" value="A">
+        {{ Alternativa_A }}
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="resposta" value="B">
+        {{ Alternativa_B }}
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="resposta" value="C"> 
+        {{ Alternativa_C }}
+    </label>
+
+    <label class="opcao">
+        <input type="radio" name="resposta" value="D">
+        {{ Alternativa_D }}
+    </label>
+
+    <div id="resposta-container" data-resposta-correta="{{ Resposta }}">
+        <p id="resposta-botao">
+            Verificar Resposta
+        </p>
+    </div>
+
+    <footer>
+        <p>SIN/Chat</p>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

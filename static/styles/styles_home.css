@@ -1,0 +1,101 @@
+/* Centralizar texto */
+.text-center {
+  text-align: center;
+}
+
+/* Estilos de botões */
+.botao-login {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  display: block; /* Garante que o botão ocupa toda a largura disponível */
+  margin: 10px auto; /* Centraliza o botão horizontalmente */
+}
+
+.botao-login:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilos de imagens */
+#imagem-container {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#imagem-container img {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos do cabeçalho */
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav li a {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Estilos do conteúdo centralizado */
+.conteudo-centralizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+}
+
+/* Estilos do formulário de intervenção (bloco de login) */
+#formulario-intervencao {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  margin-top: 20px;
+  display: flex; /* Adiciona flexbox ao formulário */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+#formulario-intervencao label {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%; /* Garante que as labels ocupem toda a largura */
+  text-align: left;/* alinha as labels a esquerda */
+}
+
+.centralized-input, .centralized-select {
+  width: calc(100% - 12px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilos do rodapé */
+footer {
+  text-align: center;
+  padding: 5px 0;
+  background-color: #f0f0f0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

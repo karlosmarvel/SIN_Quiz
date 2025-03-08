@@ -1,0 +1,47 @@
+    {% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso</title>
+    <link rel="stylesheet" href="{% static '/styles/styles_home.css'%}">
+</head>
+<body>
+    <header>
+        <nav class="text-center">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Ajuda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="conteudo-centralizado">
+        <div id="imagem-container" class="imagem-icone">
+            <img src="{% static 'Imagens/SIN_Quiz_Logo.png' %}" alt="Logo SIN/Quiz">
+        </div>
+
+        <div id="formulario-intervencao" class="login-container">
+            <label for="nome-operador">Nome de Usuário:</label><br>
+            <input type="text" id="nome-operador" name="nome-operador" placeholder="Digite seu nome de usuário" class="centralized-input"><br><br>
+
+            <label for="assunto">Assunto:</label><br>
+            <select id="assunto" name="assunto" class="centralized-select">
+                <option value="programacao">Programação de Intervenções</option>
+            </select><br><br>
+
+            <button class="botao-login" id="botao-entrar">Continuar</button>
+        </div>
+    </div>
+    <footer>
+        <p>SIN/Chat</p>
+    </footer>
+    <script>
+        document.getElementById("botao-entrar").addEventListener("click", function() {
+            window.location.href = "/index"; // Adicionando barra para ser relativo a raiz do dominio
+        });
+    </script>
+</body>
+</html>
